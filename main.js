@@ -103,26 +103,26 @@ const posts = [
 
         const postElement = document.querySelector("div.posts-list");
 
-        posts.forEach(() => {
+        posts.forEach((singlePost) => {
 
             postElement.innerHTML += `<div class="post">
             <div class="post__header">
                 <div class="post-meta">                    
                     <div class="post-meta__icon">
-                        <img class="profile-pic" src="${postElement.media}" alt="Phil Mangione">                    
+                        <img class="profile-pic" src="${singlePost.media}" alt="Phil Mangione">                    
                     </div>
                     <div class="post-meta__data">
-                        <div class="post-meta__author">${postElement.name}</div>
-                        <div class="post-meta__time">${postElement.created}</div>
+                        <div class="post-meta__author">${singlePost.name}</div>
+                        <div class="post-meta__time">${singlePost.created}</div>
                     </div>                    
                 </div>
             </div>
-            <div class="post__text">${postElement.content}</div>
+            <div class="post__text">${singlePost.content}</div>
             <div class="post__image">
-                <img src="${postElement.image}" alt="">
+                <img src="${singlePost.image}" alt="">
             </div>
             <div class="post__footer">
-                <div class="${postElement.likes}">
+                <div class="${singlePost.likes}">
                     <div class="likes__cta">
                         <a class="like-button  js-like-button" href="#" data-postid="1">
                             <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
@@ -139,5 +139,5 @@ const posts = [
 
         });
 
-        // ${posts.media}
+        
         /*dubbi : trovare un modo per non far ripetere il post quindi mi basta creare 5 innerHTML??? o ci sarà un'altro modo?*/
