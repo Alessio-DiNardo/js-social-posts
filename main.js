@@ -109,20 +109,20 @@ const posts = [
             <div class="post__header">
                 <div class="post-meta">                    
                     <div class="post-meta__icon">
-                        <img class="profile-pic" src="${posts.media}" alt="Phil Mangione">                    
+                        <img class="profile-pic" src="${postElement.media}" alt="Phil Mangione">                    
                     </div>
                     <div class="post-meta__data">
-                        <div class="post-meta__author">Phil Mangione</div>
-                        <div class="post-meta__time">4 mesi fa</div>
+                        <div class="post-meta__author">${postElement.name}</div>
+                        <div class="post-meta__time">${postElement.created}</div>
                     </div>                    
                 </div>
             </div>
-            <div class="post__text">Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.</div>
+            <div class="post__text">${postElement.content}</div>
             <div class="post__image">
-                <img src="https://unsplash.it/600/300?image=171" alt="">
+                <img src="${postElement.image}" alt="">
             </div>
             <div class="post__footer">
-                <div class="likes js-likes">
+                <div class="${postElement.likes}">
                     <div class="likes__cta">
                         <a class="like-button  js-like-button" href="#" data-postid="1">
                             <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
@@ -139,5 +139,5 @@ const posts = [
 
         });
 
-
-        
+        // ${posts.media}
+        /*dubbi : trovare un modo per non far ripetere il post quindi mi basta creare 5 innerHTML??? o ci sarà un'altro modo?*/
