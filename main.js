@@ -139,5 +139,12 @@ const posts = [
 
         });
 
+        const buttonLike = document.querySelector(".like-button");
+
+
+        buttonLike.addEventListener("click", function() {
+
+        buttonLike = document.getElementsByClassName(".like-button--liked")
+
+        })
         
-        /*dubbi : trovare un modo per non far ripetere il post quindi mi basta creare 5 innerHTML??? o ci sarà un'altro modo?*/
