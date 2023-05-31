@@ -112,14 +112,14 @@ const posts = [
                         <img class="profile-pic" src="${singlePost.media}" alt="Phil Mangione">                    
                     </div>
                     <div class="post-meta__data">
-                        <div class="post-meta__author">${singlePost.name}</div>
+                        <div class="post-meta__author">${singlePost.author.name}</div>
                         <div class="post-meta__time">${singlePost.created}</div>
                     </div>                    
                 </div>
             </div>
             <div class="post__text">${singlePost.content}</div>
             <div class="post__image">
-                <img src="${singlePost.image}" alt="">
+                <img src="${singlePost.author.image}" alt="">
             </div>
             <div class="post__footer">
                 <div class="${singlePost.likes}">
